@@ -3,27 +3,17 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Helvetica Neue', sans-serif;
-    color: #fff;
-    background-color: #0b0b0b;
+    color: #e0e0e0; /* Gris clair pour le texte général */
+    background-color: #121212; /* Fond foncé */
 }
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: #f1f1f1; /* Gris clair pour les liens */
 }
 
 h1, h2, h3 {
     font-weight: bold;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
 }
 
 /* Header Section */
@@ -44,6 +34,7 @@ header {
 
 .navbar .logo h1 {
     font-size: 24px;
+    color: #fff;
 }
 
 nav ul {
@@ -56,12 +47,12 @@ nav ul li {
 
 nav ul li a {
     font-size: 16px;
-    color: white;
+    color: #dcdcdc; /* Gris clair pour les liens de la navigation */
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #f9f9f9;
+    color: #ffffff; /* Blanc lors du survol */
 }
 
 .hero {
@@ -77,11 +68,13 @@ nav ul li a:hover {
 .hero h2 {
     font-size: 48px;
     margin-bottom: 20px;
+    color: #f1f1f1; /* Gris clair */
 }
 
 .hero p {
     font-size: 20px;
     margin-bottom: 30px;
+    color: #dcdcdc; /* Gris clair */
 }
 
 .cta-btn {
@@ -99,7 +92,7 @@ nav ul li a:hover {
 
 /* Services Section */
 #services {
-    background-color: #333;
+    background-color: #333; /* Fond gris foncé */
     padding: 60px 20px;
     text-align: center;
 }
@@ -107,6 +100,7 @@ nav ul li a:hover {
 #services h2 {
     font-size: 32px;
     margin-bottom: 40px;
+    color: #f1f1f1; /* Gris clair pour les titres */
 }
 
 .service {
@@ -114,18 +108,19 @@ nav ul li a:hover {
     width: 30%;
     margin: 20px;
     padding: 20px;
-    background-color: #444;
+    background-color: #444; /* Gris encore plus foncé pour chaque service */
     border-radius: 8px;
 }
 
 .service h3 {
     font-size: 24px;
     margin-bottom: 20px;
+    color: #f1f1f1; /* Gris clair */
 }
 
 /* Testimonials Section */
 #testimonials {
-    background-color: #222;
+    background-color: #222; /* Fond gris très foncé */
     padding: 60px 20px;
     text-align: center;
 }
@@ -133,10 +128,11 @@ nav ul li a:hover {
 #testimonials h2 {
     font-size: 32px;
     margin-bottom: 40px;
+    color: #f1f1f1; /* Gris clair */
 }
 
 .testimonial {
-    background-color: #333;
+    background-color: #333; /* Gris foncé */
     padding: 20px;
     margin: 20px auto;
     width: 60%;
@@ -146,17 +142,19 @@ nav ul li a:hover {
 .testimonial p {
     font-size: 18px;
     margin-bottom: 10px;
+    color: #e0e0e0; /* Gris très clair */
 }
 
 .testimonial span {
     display: block;
     font-weight: bold;
     margin-top: 10px;
+    color: #dcdcdc; /* Gris plus clair pour le nom du client */
 }
 
 /* Contact Form Section */
 #contact {
-    background-color: #333;
+    background-color: #333; /* Fond gris foncé */
     padding: 60px 20px;
     text-align: center;
 }
@@ -170,7 +168,7 @@ nav ul li a:hover {
     width: 100%;
     padding: 15px;
     margin-bottom: 15px;
-    background-color: #444;
+    background-color: #444; /* Gris encore plus foncé pour les champs */
     border: none;
     border-radius: 8px;
     color: #fff;
@@ -193,7 +191,7 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: #222;
+    background-color: #222; /* Fond gris très foncé */
     text-align: center;
     padding: 20px;
     color: #fff;
@@ -205,10 +203,10 @@ footer .social-media {
 
 footer .social-media a {
     margin: 0 10px;
-    color: #fff;
+    color: #f1f1f1; /* Gris clair pour les liens de réseaux sociaux */
     font-size: 18px;
 }
 
 footer .social-media a:hover {
-    color: #00b4e6;
+    color: #00b4e6; /* Gris clair pour un effet de survol */
 }
