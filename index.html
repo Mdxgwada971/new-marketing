@@ -1,121 +1,116 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explorez les tendances du marketing digital avec nos services développés pour maximiser votre impact en ligne.">
+    <meta name="keywords" content="marketing digital, SEO, branding, réseaux sociaux, stratégie marketing">
+    <meta name="author" content="Votre Nom">
     <title>Marketing Digital</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 </head>
 <body>
-    <header>
-        <h1>Bienvenue sur le site de Marketing Digital</h1>
-        <nav>
-            <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#team">Équipe</a></li>
-                <li><a href="#testimonials">Témoignages</a></li>
-                <li><a href="#newsletter">Newsletter</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">MarketingDigital</a>
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hero">
+                <h1>Transformez votre présence en ligne</h1>
+                <p>Boostez votre marque avec nos solutions innovantes de marketing digital.</p>
+                <a href="#services" class="btn">Nos Services</a>
+            </div>
+        </div>
     </header>
-    <main>
-        <section id="carousel">
-            <div class="carousel-container">
-                <div class="carousel-slide">
-                    <img src="https://via.placeholder.com/800x400.png?text=Image+1" alt="Image 1">
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://via.placeholder.com/800x400.png?text=Image+2" alt="Image 2">
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://via.placeholder.com/800x400.png?text=Image+3" alt="Image 3">
-                </div>
+
+    <section id="carousel" class="carousel">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url('image1.jpg')"></div>
+                <div class="swiper-slide" style="background-image:url('image2.jpg')"></div>
+                <div class="swiper-slide" style="background-image:url('image3.jpg')"></div>
             </div>
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
-        </section>
-        <section id="services">
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
             <h2>Nos Services</h2>
-            <div class="service">
+            <div class="service-item">
                 <h3>SEO</h3>
-                <p>Optimisation des moteurs de recherche pour améliorer votre visibilité en ligne.</p>
+                <p>Optimisez votre visibilité sur les moteurs de recherche.</p>
             </div>
-            <div class="service">
-                <h3>Content Marketing</h3>
-                <p>Création et distribution de contenu de qualité pour attirer et fidéliser votre audience.</p>
+            <div class="service-item">
+                <h3>Réseaux Sociaux</h3>
+                <p>Créez une communauté engagée autour de votre marque.</p>
             </div>
-            <div class="service">
-                <h3>Publicité en Ligne</h3>
-                <p>Gestion des campagnes publicitaires sur Google Ads, Facebook Ads, et autres plateformes.</p>
+            <div class="service-item">
+                <h3>Branding</h3>
+                <p>Développez une identité forte qui résonne avec votre audience.</p>
             </div>
-        </section>
-        <section id="blog">
-            <h2>Blog</h2>
-            <article>
-                <h3>Les tendances du marketing digital en 2025</h3>
-                <p>Découvrez les dernières tendances et stratégies pour rester en avance dans le domaine du marketing digital.</p>
-                <a href="#">Lire la suite</a>
-            </article>
-            <article>
-                <h3>Comment optimiser votre SEO</h3>
-                <p>Conseils pratiques pour améliorer votre référencement naturel et attirer plus de trafic.</p>
-                <a href="#">Lire la suite</a>
-            </article>
-        </section>
-        <section id="about">
-            <h2>À propos</h2>
-            <p>Nous sommes une agence de marketing digital dédiée à aider les entreprises à atteindre leurs objectifs en ligne. Avec des années d'expérience et une équipe passionnée, nous offrons des solutions personnalisées adaptées à vos besoins.</p>
-        </section>
-        <section id="team">
-            <h2>Notre Équipe</h2>
-            <div class="team-member">
-                <h3>Jean Dupont</h3>
-                <p>Expert en SEO avec plus de 10 ans d'expérience.</p>
-            </div>
-            <div class="team-member">
-                <h3>Marie Martin</h3>
-                <p>Spécialiste en content marketing et créatrice de contenu.</p>
-            </div>
-        </section>
-        <section id="testimonials">
-            <h2>Témoignages</h2>
-            <div class="testimonial">
-                <p>"Excellente agence! Leur expertise en SEO a vraiment boosté notre trafic."</p>
-                <p>- Client satisfait</p>
-            </div>
-            <div class="testimonial">
-                <p>"Leur stratégie de content marketing a augmenté notre visibilité et notre engagement."</p>
-                <p>- Client ravi</p>
-            </div>
-        </section>
-        <section id="newsletter">
-            <h2>Newsletter</h2>
-            <p>Inscrivez-vous à notre newsletter pour recevoir les dernières nouvelles et astuces en marketing digital.</p>
-            <form>
-                <label for="newsletter-email">Email:</label><br>
-                <input type="email" id="newsletter-email" name="newsletter-email"><br>
-                <input type="submit" value="S'inscrire">
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="portfolio-item" style="background-image:url('portfolio1.jpg')"></div>
+            <div class="portfolio-item" style="background-image:url('portfolio2.jpg')"></div>
+            <div class="portfolio-item" style="background-image:url('portfolio3.jpg')"></div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>À propos de Nous</h2>
+            <p>Avec des années d'expertise, nous aidons les entreprises à atteindre leurs objectifs en ligne.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contactez-Nous</h2>
+            <form action="#">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Envoyer</button>
             </form>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <form>
-                <label for="name">Nom:</label><br>
-                <input type="text" id="name" name="name"><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br>
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message"></textarea><br>
-                <input type="submit" value="Envoyer">
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Marketing Digital. Tous droits réservés.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 MarketingDigital. Tous droits réservés.</p>
+        </div>
     </footer>
+
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 </html>
