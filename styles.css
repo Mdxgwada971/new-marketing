@@ -14,7 +14,6 @@ body {
 
 /* Header */
 .header {
-    .header {
    position: relative;
     height: 100vh;
     background: url('images/header-bg.jpg') no-repeat center center/cover;
