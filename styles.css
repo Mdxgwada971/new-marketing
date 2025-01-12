@@ -16,7 +16,7 @@ body {
 .header {
     position: relative;
     height: 100vh;
-    background: url('header-bg.jpg') no-repeat center center/cover;
+    background: url('images/header-bg.jpg') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,14 +25,15 @@ body {
 }
 
 .navbar {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1em;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .nav-links {
@@ -45,6 +46,11 @@ body {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #007bff;
 }
 
 .hero h1 {
@@ -65,6 +71,11 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #0056b3;
 }
 
 /* Carousel */
@@ -97,6 +108,11 @@ section {
     background: #222;
     padding: 2em;
     border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-item:hover, .portfolio-item:hover {
+    transform: scale(1.05);
 }
 
 .portfolio-item {
@@ -139,4 +155,23 @@ section {
     text-align: center;
     padding: 1em;
     background: #111;
+}
+
+/* Animations */
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 0.6s;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+}
+
+[data-aos="fade-up"] {
+    transform: translateY(20px);
+}
+
+[data-aos="fade-up"].aos-animate {
+    transform: translateY(0);
 }
