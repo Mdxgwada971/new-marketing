@@ -1,140 +1,142 @@
+/* General Styles */
 body {
-    font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
     background-color: #000;
-    color: #fff;
 }
 
-header {
-    background-color: #000;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-    border-bottom: 1px solid #fff;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #4CAF50;
-}
-
-main {
-    padding: 2rem;
+.container {
+    width: 90%;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
 }
 
-section {
-    background-color: #111;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-.service, .team-member, .testimonial {
-    margin-bottom: 1rem;
-}
-
-form label {
-    display: block;
-    margin-top: 1rem;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-    background-color: #222;
-    color: #fff;
-    border: 1px solid #4CAF50;
-    border-radius: 4px;
-}
-
-form input[type="submit"] {
-    background-color: #4CAF50;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form input[type="submit"]:hover {
-    background-color: #45a049;
-}
-
-footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    border-top: 1px solid #fff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-#carousel {
+/* Header */
+.header {
     position: relative;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-.carousel-container {
+    height: 100vh;
+    background: url('header-bg.jpg') no-repeat center center/cover;
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.carousel-slide {
-    min-width: 100%;
-    box-sizing: border-box;
-}
-
-.carousel-slide img {
+.navbar {
+    position: absolute;
+    top: 0;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+}
+
+.btn {
+    padding: 0.8em 1.5em;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Carousel */
+.carousel {
+    background: #111;
+    padding: 2em 0;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 400px;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+/* Sections */
+section {
+    padding: 4em 0;
+}
+
+.services, .portfolio {
+    text-align: center;
+}
+
+.service-item, .portfolio-item {
+    margin: 1em auto;
+    background: #222;
+    padding: 2em;
     border-radius: 8px;
 }
 
-.prev, .next {
+.portfolio-item {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* About */
+.about p {
+    line-height: 1.8;
+}
+
+/* Contact */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contact input, .contact textarea {
+    padding: 0.8em;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: #111;
+    color: #fff;
+}
+
+.contact button {
+    align-self: flex-start;
+    padding: 0.8em 1.5em;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
     cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
 }
 
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1em;
+    background: #111;
 }
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0[_{{{CITATION{{{_1{](https://github.com/js202005082300/Aide-m-moires/tree/c85c562d508c68fa086972462338ed773a25c8ac/JavaScript%2Fcours%2F004_op%C3%A9rateurs%2Fnote.md)[_{{{CITATION{{{_2{](https://github.com/NathanVD/presences/tree/34d67dd7fb6348ee2b3e7087c9ba5d7450f8e2f7/resources%2Fviews%2Ftemplates%2Fhome%2Fnav.blade.php)[_{{{CITATION{{{_3{](https://github.com/NafisianCastle/WebTech-E/tree/e9f3c4a4c16f2e0c200b81ed04c5ee98ecbeb4cb/Lab%20Task-9%2Fadmin%2Fview%2FaddEditor.php)[_{{{CITATION{{{_4{](https://github.com/Fr3dyS/skola/tree/c8602e492d683be53e06e0791cd170e7452fecc2/htdocs%2FPololetniProjekt%2Flaptop-ui-master%2Fvozy.php)[_{{{CITATION{{{_5{](https://github.com/UuzumakiNaruto/CCIMS/tree/ebcfd7feb322a8a28081a1977f0afe5ad6c24034/CCIMS%2Fotp.php)
