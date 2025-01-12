@@ -3,68 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boulangerie La Tradition</title>
+    <title>Marketing Digital</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
-        <div class="navbar">
-            <div class="logo">
-                <h1>Boulangerie La Tradition</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#produits">Nos Produits</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#a-propos">À propos</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="hero">
-            <h2>Bienvenue à La Tradition</h2>
-            <p>Une boulangerie artisanale au cœur de la ville</p>
-            <a href="#produits" class="cta-btn">Découvrir nos produits</a>
-        </div>
+        <h1>Bienvenue sur le site de Marketing Digital</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#team">Équipe</a></li>
+                <li><a href="#testimonials">Témoignages</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <section id="produits">
-        <h2>Nos Produits</h2>
-        <div class="produit">
-            <h3>Le Pain Tradition</h3>
-            <p>Un pain cuit à la pierre, avec une croûte dorée et une mie aérée.</p>
-        </div>
-        <div class="produit">
-            <h3>Les Viennoiseries</h3>
-            <p>Des croissants, pains au chocolat et brioches faites maison pour commencer la journée.</p>
-        </div>
-        <div class="produit">
-            <h3>Les Pâtisseries</h3>
-            <p>Des éclairs, tartes et gâteaux pour tous les gourmands.</p>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contactez-nous</h2>
-        <form action="#">
-            <input type="text" name="nom" placeholder="Votre nom" required>
-            <input type="email" name="email" placeholder="Votre email" required>
-            <textarea name="message" placeholder="Votre message" required></textarea>
-            <button type="submit">Envoyer</button>
-        </form>
-    </section>
-
-    <section id="a-propos">
-        <h2>À propos</h2>
-        <p>La Boulangerie La Tradition vous propose des produits artisanaux fabriqués sur place, avec des ingrédients locaux de qualité. Nous perpétuons le savoir-faire traditionnel pour offrir à nos clients des saveurs authentiques.</p>
-    </section>
-
+    <main>
+        <section id="carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="image1.jpg" alt="Image 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="image2.jpg" alt="Image 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="image3.jpg" alt="Image 3">
+                </div>
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </section>
+        <section id="services">
+            <h2>Nos Services</h2>
+            <div class="service">
+                <h3>SEO</h3>
+                <p>Optimisation des moteurs de recherche pour améliorer votre visibilité en ligne.</p>
+            </div>
+            <div class="service">
+                <h3>Content Marketing</h3>
+                <p>Création et distribution de contenu de qualité pour attirer et fidéliser votre audience.</p>
+            </div>
+            <div class="service">
+                <h3>Publicité en Ligne</h3>
+                <p>Gestion des campagnes publicitaires sur Google Ads, Facebook Ads, et autres plateformes.</p>
+            </div>
+        </section>
+        <section id="blog">
+            <h2>Blog</h2>
+            <article>
+                <h3>Les tendances du marketing digital en 2025</h3>
+                <p>Découvrez les dernières tendances et stratégies pour rester en avance dans le domaine du marketing digital.</p>
+                <a href="#">Lire la suite</a>
+            </article>
+            <article>
+                <h3>Comment optimiser votre SEO</h3>
+                <p>Conseils pratiques pour améliorer votre référencement naturel et attirer plus de trafic.</p>
+                <a href="#">Lire la suite</a>
+            </article>
+        </section>
+        <section id="about">
+            <h2>À propos</h2>
+            <p>Nous sommes une agence de marketing digital dédiée à aider les entreprises à atteindre leurs objectifs en ligne. Avec des années d'expérience et une équipe passionnée, nous offrons des solutions personnalisées adaptées à vos besoins.</p>
+        </section>
+        <section id="team">
+            <h2>Notre Équipe</h2>
+            <div class="team-member">
+                <h3>Jean Dupont</h3>
+                <p>Expert en SEO avec plus de 10 ans d'expérience.</p>
+            </div>
+            <div class="team-member">
+                <h3>Marie Martin</h3>
+                <p>Spécialiste en content marketing et créatrice de contenu.</p>
+            </div>
+        </section>
+        <section id="testimonials">
+            <h2>Témoignages</h2>
+            <div class="testimonial">
+                <p>"Excellente agence! Leur expertise en SEO a vraiment boosté notre trafic."</p>
+                <p>- Client satisfait</p>
+            </div>
+            <div class="testimonial">
+                <p>"Leur stratégie de content marketing a augmenté notre visibilité et notre engagement."</p>
+                <p>- Client ravi</p>
+            </div>
+        </section>
+        <section id="newsletter">
+            <h2>Newsletter</h2>
+            <p>Inscrivez-vous à notre newsletter pour recevoir les dernières nouvelles et astuces en marketing digital.</p>
+            <form>
+                <label for="newsletter-email">Email:</label><br>
+                <input type="email" id="newsletter-email" name="newsletter-email"><br>
+                <input type="submit" value="S'inscrire">
+            </form>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form>
+                <label for="name">Nom:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message"></textarea><br>
+                <input type="submit" value="Envoyer">
+            </form>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2025 Boulangerie La Tradition</p>
-        <p>Adresse : 12 rue des Artisans, Ville, Code Postal</p>
-        <p>Téléphone : 01 23 45 67 89</p>
+        <p>&copy; 2025 Marketing Digital. Tous droits réservés.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
