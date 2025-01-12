@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Digital Futuriste</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #000428, #004e92);
+            color: #ffffff;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+        }
+        nav a {
+            color: #00ff99;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 20px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            color: #ff0075;
+            border-color: #ff0075;
+            background: rgba(255, 0, 117, 0.1);
+        }
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .card {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            margin: 20px;
+            padding: 20px;
+            text-align: left;
+        }
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .testimonials, .team, .gallery {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 40px 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .testimonial, .team-member {
+            margin: 20px 0;
+        }
+        .gallery img {
+            margin: 10px;
+            width: calc(33% - 20px);
+        }
+        .animated-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ffffff;
+            background: #ff0075;
+            border: 2px solid #ff0075;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .animated-button:hover {
+            color: #ff0075;
+            background: transparent;
+            border-color: #ff0075;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const testimonials = [
+                {
+                    text: "Grâce à cette équipe incroyable, notre entreprise a doublé son trafic en ligne !",
+                    author: "Client Satisfait"
+                },
+                {
+                    text: "Des professionnels passionnés et compétents. Nous les recommandons vivement.",
+                    author: "Client Heureux"
+                },
+                {
+                    text: "Leur approche innovante a transformé notre présence en ligne.",
+                    author: "Client Innovant"
+                },
+                {
+                    text: "Une équipe dédiée et des résultats impressionnants.",
+                    author: "Client Impressionné"
+                },
+                {
+                    text: "Nous avons vu une augmentation significative de notre ROI.",
+                    author: "Client Récurrent"
+                }
+            ];
+
+            const randomTestimonial = testimonials[Math.floor(Math.random() * testimonials.length)];
+            document.getElementById("randomTestimonialText").innerText = `"${randomTestimonial.text}"`;
+            document.getElementById("randomTestimonialAuthor").innerText = `- ${randomTestimonial.author}`;
+        });
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Marketing Digital Futuriste</h1>
+</header>
+
+<nav>
+    <a href="#home" class="animated-button">Accueil</a>
+    <a href="#services" class="animated-button">Services</a>
+    <a href="#about" class="animated-button">À propos</a>
+    <a href="#team" class="animated-button">Équipe</a>
+    <a href="#testimonials" class="animated-button">Témoignages</a>
+    <a href="#gallery" class="animated-button">Galerie</a>
+    <a href="#contact" class="animated-button">Contact</a>
+</nav>
+
+<div class="content" id="home">
+    <h2>Bienvenue sur notre site de marketing digital</h2>
+    <p>Nous offrons une gamme complète de services pour booster votre présence en ligne avec une approche innovante et futuriste.</p>
+    <img src="https://source.unsplash.com/random/800x400?office,worker" alt="Travailleurs">
+    <a href="#contact" class="animated-button">Contactez-nous</a>
+</div>
+
+<div class="content" id="services">
+    <h2>Nos Services</h2>
+    <div class="card">
+        <h3>Consultation</h3>
+        <p>Des conseils personnalisés pour optimiser votre stratégie de marketing digital.</p>
+        <img src="https://source.unsplash.com/random/800x400?consulting" alt="Consultation">
+    </div>
+    <div class="card">
+        <h3>SEO</h3>
+        <p>Améliorez votre visibilité en ligne avec notre expertise en optimisation pour les moteurs de recherche.</p>
+        <img src="https://source.unsplash.com/random/800x400?seo" alt="SEO">
+    </div>
+    <div class="card">
+        <h3>Publicité en ligne</h3>
+        <p>Des campagnes publicitaires ciblées pour atteindre votre audience idéale.</p>
+        <img src="https://source.unsplash.com/random/800x400?advertising" alt="Publicité en ligne">
+    </div>
+</div>
+
+<div class="content" id="about">
+    <h2>À propos</h2>
+    <p>Nous sommes une équipe passionnée par le marketing digital et l'innovation. Notre mission est de vous aider à réussir en ligne.</p>
+    <img src="https://source.unsplash.com/random/800x400?teamwork" alt="À propos">
+</div>
+
+<div class="content team" id="team">
+    <h2>Notre Équipe</h2>
+    <div class="team-member">
+        <h3>Jean Dupont</h3>
+        <p>Chef de Projet</p>
+        <img src="https://source.unsplash.com/random/800x400?person,manager" alt="Jean Dupont">
+    </div>
+    <div class="team-member">
+        <h3>Marie Curie</h3>
+        <p>Spécialiste SEO</p>
+        <img src="https://source.unsplash.com/random/800x400?person,seo" alt="Marie Curie">
+    </div>
+    <div class="team-member">
+        <h3>Louis Pasteur</h3>
+        <p>Analyste de Données</p>
+        <img src="https://source.unsplash.com/random/800x400?person,analyst" alt="Louis Pasteur">
+    </div>
+</div>
+
+<div class="content testimonials" id="testimonials">
+    <h2>Témoignages</h2>
+    <div class="testimonial">
+        <p id="randomTestimonialText"></p>
+        <p id="randomTestimonialAuthor"></p>
+        <img src="https://source.unsplash.com/random/800x400?happy,client" alt="Témoignage Aléatoire">
+    </div>
+</div>
+
+<div class="content gallery" id="gallery">
+    <h2>Galerie</h2>
+    <img src="https://source.unsplash.com/random/400x400?marketing" alt="Image 1">
+    <img src="https://source.unsplash.com/random/400x400?digital" alt="Image 2">
+    <img src="https://source.unsplash.com/random/400x400?technology" alt="Image 3">
+</div>
+
+<div class="content" id="contact">
+    <h2>Contact</h2>
+    <p>Vous avez des questions ou besoin d'aide ? Contactez-nous à l'adresse suivante : <a href="mailto:contact@marketingfuturiste.com">contact@marketingfuturiste.com</a></p>
+    <img src="https://source.unsplash.com/random/800x400?contact,us" alt="Contact">
+</div>
+
+<div class="footer">
+    <p>&copy; 2025 Marketing Digital Futuriste. Tous droits réservés.</p>
+</div>
+
+</body>
+</html>
