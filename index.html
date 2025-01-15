@@ -7,64 +7,74 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        /* Styles généraux */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-        }
-
-        .header {
-            background: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-links {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            gap: 15px;
-        }
-
-        .nav-links li {
-            display: inline;
-        }
-
-        .nav-links a {
+        /* Style pour le bouton de devis */
+        #quoteButton {
+            background-color: #28a745;
             color: white;
-            text-decoration: none;
-            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
         }
 
-        .nav-links a:hover {
-            color: #00bcd4;
+        #quoteButton:hover {
+            background-color: #218838;
         }
 
-        .hero {
-            text-align: center;
-            padding: 50px 20px;
-            background: #f4f4f4;
-        }
-
-        section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .footer {
-            text-align: center;
+        /* Style pour le formulaire de devis */
+        #quoteForm {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 500px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             padding: 20px;
-            background: #333;
-            color: #fff;
+            border-radius: 10px;
+            z-index: 1000;
+        }
+
+        #quoteForm h3 {
+            margin-bottom: 20px;
+        }
+
+        #quoteForm input,
+        #quoteForm select,
+        #quoteForm textarea {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #quoteForm button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #quoteForm button:hover {
+            background-color: #0056b3;
+        }
+
+        #quoteOverlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
         }
     </style>
 </head>
@@ -83,6 +93,7 @@
             <h1>Boost Your Online Presence</h1>
             <p>Transform your business with our digital marketing solutions.</p>
             <button class="btn">Get Started</button>
+            <!-- Bouton pour demander un devis -->
             <button id="quoteButton">Get a Quote</button>
         </div>
     </header>
