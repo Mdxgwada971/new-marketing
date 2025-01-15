@@ -7,26 +7,73 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        /* Style pour le bouton "Retour en haut" */
-        #backToTop {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: none;
-            background-color: #007BFF;
+        /* Style pour le bouton de devis */
+        #quoteButton {
+            background-color: #28a745;
             color: white;
+            padding: 10px 20px;
             border: none;
-            border-radius: 50%;
-            padding: 15px;
-            font-size: 20px;
+            border-radius: 5px;
             cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: opacity 0.3s ease, transform 0.3s ease;
+            font-size: 16px;
         }
 
-        #backToTop:hover {
+        #quoteButton:hover {
+            background-color: #218838;
+        }
+
+        /* Style pour le formulaire de devis */
+        #quoteForm {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 500px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1000;
+        }
+
+        #quoteForm h3 {
+            margin-bottom: 20px;
+        }
+
+        #quoteForm input,
+        #quoteForm select,
+        #quoteForm textarea {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #quoteForm button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #quoteForm button:hover {
             background-color: #0056b3;
-            transform: scale(1.1);
+        }
+
+        #quoteOverlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
         }
     </style>
 </head>
@@ -45,69 +92,68 @@
             <h1>Boost Your Online Presence</h1>
             <p>Transform your business with our digital marketing solutions.</p>
             <button class="btn">Get Started</button>
+            <!-- Bouton pour demander un devis -->
+            <button id="quoteButton">Get a Quote</button>
         </div>
     </header>
 
-    <section id="services" class="services" data-aos="fade-up">
-        <h2>Our Services</h2>
-        <div class="service-item" data-aos="fade-up">
-            <h3>SEO</h3>
-            <p>Optimize your website to rank higher on search engines.</p>
-        </div>
-        <div class="service-item" data-aos="fade-up">
-            <h3>Social Media</h3>
-            <p>Engage with your audience on popular platforms.</p>
-        </div>
-    </section>
-
-    <section id="portfolio" class="portfolio" data-aos="fade-up">
-        <h2>Our Portfolio</h2>
-        <div class="portfolio-item" style="background-image: url('images/portfolio1.jpg');" data-aos="fade-up"></div>
-        <div class="portfolio-item" style="background-image: url('images/portfolio2.jpg');" data-aos="fade-up"></div>
-    </section>
-
-    <section id="about" class="about" data-aos="fade-up">
-        <h2>About Us</h2>
-        <p>We are a team of passionate digital marketers helping businesses grow online.</p>
-    </section>
-
-    <section id="contact" class="contact" data-aos="fade-up">
-        <h2>Contact Us</h2>
-        <form action="#">
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Your Message"></textarea>
-            <button type="submit">Send</button>
+    <!-- Formulaire de devis -->
+    <div id="quoteOverlay"></div>
+    <div id="quoteForm">
+        <h3>Request a Quote</h3>
+        <form id="quoteRequestForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="business" placeholder="Your Business Name" required>
+            <select name="service" required>
+                <option value="" disabled selected>Choose a Service</option>
+                <option value="SEO">SEO</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Web Design">Web Design</option>
+            </select>
+            <textarea name="message" placeholder="Describe your needs" rows="4"></textarea>
+            <button type="submit">Submit</button>
+            <button type="button" id="closeQuoteForm">Cancel</button>
         </form>
-    </section>
+    </div>
 
     <footer class="footer">
         <p>&copy; 2025 Marketing Digital. All rights reserved.</p>
     </footer>
 
-    <!-- Bouton "Retour en haut" -->
-    <button id="backToTop" title="Go to top">↑</button>
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
 
-        // Script pour gérer le bouton "Retour en haut"
-        const backToTopButton = document.getElementById('backToTop');
+        // Gestion de l'affichage du formulaire de devis
+        const quoteButton = document.getElementById('quoteButton');
+        const quoteForm = document.getElementById('quoteForm');
+        const quoteOverlay = document.getElementById('quoteOverlay');
+        const closeQuoteForm = document.getElementById('closeQuoteForm');
 
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopButton.style.display = 'block';
-            } else {
-                backToTopButton.style.display = 'none';
-            }
+        quoteButton.addEventListener('click', () => {
+            quoteForm.style.display = 'block';
+            quoteOverlay.style.display = 'block';
         });
 
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+        closeQuoteForm.addEventListener('click', () => {
+            quoteForm.style.display = 'none';
+            quoteOverlay.style.display = 'none';
+        });
+
+        quoteOverlay.addEventListener('click', () => {
+            quoteForm.style.display = 'none';
+            quoteOverlay.style.display = 'none';
+        });
+
+        // Gestion du formulaire
+        const quoteRequestForm = document.getElementById('quoteRequestForm');
+        quoteRequestForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your request! We will get back to you soon.');
+            quoteForm.style.display = 'none';
+            quoteOverlay.style.display = 'none';
+            quoteRequestForm.reset();
         });
     </script>
 </body>
